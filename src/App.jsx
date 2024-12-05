@@ -1,26 +1,20 @@
-import './App.css';
-import React from 'react';
-import { BrowserRouter, NavLink, Routes, Route } from 'react-router-dom';
-import Login from './components/Login';
-import Overview from './components/Overview';
-import Users from './components/Users';
-import Notes from './components/Notes';
-
+import "./App.css";
+import React from "react";
+import { BrowserRouter, NavLink, Routes, Route } from "react-router-dom";
+import Login from "./components/pages/Login";
+// import Users from './components/Users';
+import Notes from "./components/pages/Notes";
 
 
 function App() {
-
   return (
     <>
-    <BrowserRouter>
+      <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Login/>}></Route>
-          <Route path="/Overview" element={<Overview/>}></Route>
-          <Route path="/Users" element={<Users/>}></Route>
-          <Route path="/Notes" element={<Notes/>}></Route>
+          <Route path="/" element={<Login />}></Route>
+          <Route path="/Notes" element={<Notes />}></Route>
         </Routes>
-    </BrowserRouter>
-      
+      </BrowserRouter>
     </>
   );
 }

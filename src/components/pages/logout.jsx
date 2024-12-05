@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-import loginImage from '../assets/login-img.svg'
 import { NavLink, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import "../styles/login.css"
 
 function Login(){
 
-  const [CIN, setCin] = useState('J573531');
-  const [password, setPassword] = useState('123456');
+  // const [CIN, setCin] = useState('J573531');
+  // const [password, setPassword] = useState('123456');
   const navigate = useNavigate();
 
 //https://notes.devlop.tech/api
@@ -25,7 +25,7 @@ function Login(){
           if(token){
             localStorage.setItem('token', token);
             console.log("logain success")
-            navigate('/overview')
+            navigate('/Notes')
           }
 
       }
@@ -42,17 +42,9 @@ function Login(){
 
   return(
 
-    <div className='login-container'>
+    <div className='logout-container'>
 
-      <img src={loginImage} alt="not found" className="loginImg" />
-
-      <form className='form'>
-        <h3>Login</h3>
-        <input type="text" placeholder="CIN"  required value={CIN} onChange={(e) => setCin(e.target.value)}/>
-        <input type="password" placeholder='Password' required  value={password}  onChange={(e) => setPassword(e.target.value)} />
-        <input type='submit'  value="Login" onClick={(e) => handleClick(e)}/>
-        <NavLink to="">Update Password</NavLink>
-      </form>
+    
     </div>
 
 
