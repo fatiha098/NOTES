@@ -64,6 +64,7 @@
 
   .user {
     display: flex;
+    align-items: center;
 
     
 
@@ -75,7 +76,56 @@
         ;
       }
 
+      
+      
+      .user-settings{
+        background: #fff;
+        margin-top: 10rem;
+        margin-left: 28px;
+        padding: 20px;
+        z-index: 555;
+        position: fixed;
+        border-radius: 10px;
+        /* border: 1px solid #88d1fa; */
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.225);
+        visibility: hidden;
+        cursor: pointer;
+        
+
+        p{
+          font-size: 14px;
+          color: #443e3e;
+        }
+        .first-p{
+          border-bottom: 1px solid #80808057;
+          padding-bottom: 9px;
+        }
+
+        p:hover{
+          color: #88d1fa;
+          cursor: pointer;
+        }
+
+      }
+
+      .show{
+        visibility: visible;
+      }
+      .user-settings::before {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        left: 84%;
+        top: -22%;
+        border-bottom: 10px solid #e3e0dc;
+        border-top: 10px solid transparent;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        
+      }
   }
 }
+
 
 
